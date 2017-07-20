@@ -28,7 +28,7 @@ public class SessionManagerDebug {
     }
 
     public String getString(final String key,  final String defValue) {
-        return pref.getString("key", defValue);
+        return pref.getString(key, defValue);
     }
 
 }
