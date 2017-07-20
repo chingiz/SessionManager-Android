@@ -1,4 +1,4 @@
-# SessionManager-Android
+# SessionManager-Android [![](https://jitpack.io/v/Chingiz/SessionManager-Android.svg)](https://jitpack.io/#Chingiz/SessionManager-Android)
 Small Shared Preference Library for Android
 
 # Download
@@ -32,7 +32,7 @@ protected void onCreate(Bundle savedInstanceState) {
 	sessionManagerDebug.putString("test", "I'm SessionManager");
 
 	Log.d("Main ", "onCreate: "+sessionManagerDebug.getString("test", "1"));
-	}
+}
 ```
 # License
 
