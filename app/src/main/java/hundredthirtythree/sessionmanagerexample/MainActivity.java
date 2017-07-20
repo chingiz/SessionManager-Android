@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         SessionManagerDebug sessionManagerDebug = new SessionManagerDebug(getApplicationContext());
-        sessionManagerDebug.setString("test", "I'm SessionManager");
+        sessionManagerDebug.putString("test", "I'm SessionManager");
 
         Log.d("MainActivity ", "onCreate: "+sessionManagerDebug.getString("test", "1"));
     }
