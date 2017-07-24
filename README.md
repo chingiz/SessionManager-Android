@@ -27,11 +27,11 @@ Step 2. Add the dependency
 @Override
 protected void onCreate(Bundle savedInstanceState) {
 	...
-	SessionManagerDebug sessionManagerDebug = new SessionManagerDebug(getApplicationContext());
+	SessionManagerDebug sessionManager = new SessionManagerDebug(getApplicationContext());
         
-	sessionManagerDebug.putString("test", "I'm SessionManager");
+	sessionManager.putString("test", "I'm SessionManager");
 
-	Log.d("Main ", "onCreate: "+sessionManagerDebug.getString("test", "1"));
+	Log.d("Main ", "onCreate: "+sessionManager.getString("test", "1"));
 }
 ```
 # License
