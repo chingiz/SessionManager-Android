@@ -19,18 +19,32 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        compile 'com.github.Chingiz:SessionManager-Android:v0.2-beta'
+	        compile 'com.github.Chingiz:SessionManager-Android:1.0'
 	}
 	
 # How do I use SessionManager?
+Before using SessionManager initialize the SessionManager on your Application class.
+
+```
+public class SessionManagerApplication extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        new SessionManager.Builder()
+                        .setContext(getApplicationContext())
+                        .setPrefsName("test")
+                        .build();
+    }
+}
+```
+
+Step 2:
+
 ```
 @Override
 protected void onCreate(Bundle savedInstanceState) {
 	...
-	SessionManagerDebug sessionManager = new SessionManagerDebug(getApplicationContext());
-        
-	sessionManager.putString("test", "I'm SessionManager");
-
+	SessionManager.putString("test", "I'm SessionManager");  
 	Log.d("Main ", "onCreate: "+sessionManager.getString("test", "1"));
 }
 ```
