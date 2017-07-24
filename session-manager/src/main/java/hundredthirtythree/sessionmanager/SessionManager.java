@@ -1,8 +1,9 @@
 package hundredthirtythree.sessionmanager;
 
 import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.SharedPreferences;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by chingizh on 7/20/17.
@@ -14,12 +15,13 @@ public class SessionManager {
 
     private static SharedPreferences.Editor editor;
 
-    private static final String INIT = "init";
-
-    public SessionManager(Context context){
-        int PRIVATE_MODE = 0;
-        pref = context.getSharedPreferences(INIT, PRIVATE_MODE);
+    private static void initPrefs(Context context, String prefsName) {
+        pref = context.getSharedPreferences(prefsName, Context.MODE_PRIVATE);
     }
+
+//    public SessionManager(Context context, String prefsName) {
+//        pref = context.getSharedPreferences(prefsName, 0);
+//    }
 
     public static void putString(final String key, final String newValue) {
         editor = pref.edit();
@@ -81,10 +83,46 @@ public class SessionManager {
         return pref.getStringSet(key, defValue);
     }
 
+    public static Map<String, ?> getAll() {
+        return pref.getAll();
+    }
+
+    public static boolean containsPreference(final String key) {
+        return pref.contains(key);
+    }
+
     public static void removeKey(final String key) {
         editor = pref.edit();
         editor.remove(key);
         editor.apply();
     }
 
+    public final static class Builder {
+
+        private Context context;
+        private String prefsName;
+
+        public Builder setContext(Context context) {
+            this.context = context;
+            return this;
+        }
+
+        public Builder setPrefsName(final String prefsName) {
+            this.prefsName = prefsName;
+            return this;
+        }
+
+        public void build() {
+            if (context == null) {
+                throw new RuntimeException("Context not set, please set context on your Application class before using it.");
+            }
+
+            if (prefsName.isEmpty()) {
+                prefsName = context.getPackageName();
+            }
+
+            SessionManager.initPrefs(context, prefsName);
+        }
+
+    }
 }

@@ -13,7 +13,10 @@ public class SessionManagerApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        new SessionManager(getApplicationContext());
+        new SessionManager.Builder()
+                        .setContext(getApplicationContext())
+                        .setPrefsName("test")
+                        .build();
     }
 
 }
