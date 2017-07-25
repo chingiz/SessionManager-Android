@@ -1,7 +1,6 @@
 package hundredthirtythree.sessionmanager;
 
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.SharedPreferences;
 import java.util.*;
 
@@ -18,10 +17,6 @@ public class SessionManager {
     private static void initPrefs(Context context, String prefsName) {
         pref = context.getSharedPreferences(prefsName, Context.MODE_PRIVATE);
     }
-
-//    public SessionManager(Context context, String prefsName) {
-//        pref = context.getSharedPreferences(prefsName, 0);
-//    }
 
     public static void putString(final String key, final String newValue) {
         editor = pref.edit();

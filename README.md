@@ -45,7 +45,7 @@ Step 2:
 protected void onCreate(Bundle savedInstanceState) {
 	...
 	SessionManager.putString("test", "I'm SessionManager");  
-	Log.d("Main ", "onCreate: "+sessionManager.getString("test", "1"));
+	Log.d("Main ", "onCreate: "+SessionManager.getString("test", "1"));
 }
 ```
 # License

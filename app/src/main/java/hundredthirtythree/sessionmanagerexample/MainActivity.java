@@ -21,4 +21,5 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d("MainActivity ", "onCreate: "+ SessionManager.getString("test", "1"));
     }
+
 }
