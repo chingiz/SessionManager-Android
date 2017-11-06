@@ -3,7 +3,7 @@
           package="hundredthirtythree.sessionmanagerexample">
 
     <application
-            android:allowBackup="true"
+            android:allowBackup="false"
             android:name=".SessionManagerApplication"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"

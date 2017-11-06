@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SessionManager.iml" filepath="$PROJECT_DIR$/SessionManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SessionManager-Android.iml" filepath="$PROJECT_DIR$/SessionManager-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/session-manager/session-manager.iml" filepath="$PROJECT_DIR$/session-manager/session-manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/session-manager/session-manager.iml" filepath="$PROJECT_DIR$/session-manager/session-manager.iml" />
     </modules>
   </component>

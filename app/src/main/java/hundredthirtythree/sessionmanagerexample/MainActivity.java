@@ -15,11 +15,11 @@ public class MainActivity extends AppCompatActivity {
 
         TextView helloWorld = (TextView) findViewById(R.id.helloWorld);
 
-        SessionManager.putString("test", "I'm SessionManager");
+        SessionManager.putString(SessionKeys.TEST.getKey(), "I'm SessionManager");
 
-        helloWorld.setText(SessionManager.getString("test", "1"));
+        helloWorld.setText(SessionManager.getString(SessionKeys.TEST.getKey(), "1"));
 
-        Log.d("MainActivity ", "onCreate: "+ SessionManager.getString("test", "1"));
+        Log.d("MainActivity ", "onCreate: "+ SessionManager.getString(SessionKeys.TEST.getKey(), "1"));
     }
 
 }

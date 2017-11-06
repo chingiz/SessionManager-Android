@@ -3,7 +3,7 @@ Small Shared Preference Library for Android
 
 # Download
 
-You can download a source code from Github's [releases page](https://github.com/Chingiz/SessionManager-Android/releases/tag/v0.2-beta).
+You can download a source code from Github's [releases page](https://github.com/Chingiz/SessionManager-Android/releases/tag/1.1).
 
 Or use Gradle
 
@@ -19,7 +19,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        compile 'com.github.Chingiz:SessionManager-Android:1.0'
+	        compile 'com.github.Chingiz:SessionManager-Android:1.1'
 	}
 	
 # How do I use SessionManager?
@@ -39,6 +39,25 @@ public class SessionManagerApplication extends Application {
 ```
 
 Step 2:
+
+```
+public enum SessionKeys {
+
+    TEST("test");
+
+    private String key;
+
+    SessionKeys(String key) {
+        this.key = key;
+    }
+
+    public String getKey() {
+        return key;
+    }
+}
+```
+
+Step 3:
 
 ```
 @Override
