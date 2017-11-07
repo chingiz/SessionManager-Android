@@ -32,17 +32,18 @@ public class SessionManagerApplication extends Application {
         super.onCreate();
         new SessionManager.Builder()
                         .setContext(getApplicationContext())
-                        .setPrefsName("test")
+                        .setPrefsName(SessionKeys.PREFS_NAME.getKey())
                         .build();
     }
 }
 ```
 
-Step 2:
+Step 2 (create enum class) :
 
 ```
 public enum SessionKeys {
 
+    PREFS_NAME("test"),
     TEST("test");
 
     private String key;
@@ -63,8 +64,8 @@ Step 3:
 @Override
 protected void onCreate(Bundle savedInstanceState) {
 	...
-	SessionManager.putString("test", "I'm SessionManager");  
-	Log.d("Main ", "onCreate: "+SessionManager.getString("test", "1"));
+	SessionManager.putString(SessionKeys.TEST.getKey(), "I'm SessionManager");
+	Log.d("Main ", "onCreate: "+SessionManager.getString(SessionKeys.TEST.getKey(), "1"));
 }
 ```
 # License

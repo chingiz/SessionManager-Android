@@ -15,7 +15,7 @@ public class SessionManagerApplication extends Application {
         super.onCreate();
         new SessionManager.Builder()
                         .setContext(getApplicationContext())
-                        .setPrefsName("test")
+                        .setPrefsName(SessionKeys.PREFS_NAME.getKey())
                         .build();
     }
 

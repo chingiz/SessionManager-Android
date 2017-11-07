@@ -6,6 +6,7 @@ package hundredthirtythree.sessionmanagerexample;
 
 public enum SessionKeys {
 
+    PREFS_NAME("test"),
     TEST("test");
 
     private String key;
