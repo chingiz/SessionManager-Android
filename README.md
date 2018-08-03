@@ -1,4 +1,4 @@
-# SessionManager-Android [![](https://jitpack.io/v/Chingiz/SessionManager-Android.svg)](https://jitpack.io/#Chingiz/SessionManager-Android)[![](https://travis-ci.org/Chingiz/SessionManager-Android.svg?branch=master)](https://travis-ci.org/Chingiz/SessionManager-Android)
+# SessionManager-Android [![](https://jitpack.io/v/Chingiz/SessionManager-Android.svg)](https://jitpack.io/#Chingiz/SessionManager-Android)[![](https://travis-ci.org/Chingiz/SessionManager-Android.svg?branch=master)](https://travis-ci.org/Chingiz/SessionManager-Android)[![ko-fi](https://www.ko-fi.com/img/donate_sm.png)](https://ko-fi.com/D1D5AENH)
 Small Shared Preference Library for Android
 
 # Download
