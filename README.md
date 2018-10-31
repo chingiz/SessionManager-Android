@@ -22,8 +22,8 @@ Step 2. Add the dependency
 	        compile 'com.github.Chingiz:SessionManager-Android:1.1'
 	}
 	
-# How do I use SessionManager?
-Before using SessionManager initialize the SessionManager on your Application class.
+# How do I use SessionManager ?
+Before using SessionManager,initialize the SessionManager on your Application class.
 
 ```
 public class SessionManagerApplication extends Application {
