@@ -3,11 +3,11 @@ Small Shared Preference Library for Android
 
 # Download
 
-You can download a source code from Github's [releases page](https://github.com/Chingiz/SessionManager-Android/releases/tag/1.1).
+You can download the source code for this project from Github's [releases page](https://github.com/Chingiz/SessionManager-Android/releases/tag/1.1).
 
-Or use Gradle
+You can also get the source code with [Gradle](https://gradle.org/):
 
-Add it in your root build.gradle at the end of repositories:
+Step 1. Add the JitPack repository to your build file. Add it in your root build.gradle at the end of repositories:
 
 	allprojects {
 		repositories {
@@ -23,7 +23,7 @@ Step 2. Add the dependency
 	}
 	
 # How do I use SessionManager?
-Before using SessionManager initialize the SessionManager on your Application class.
+Before using `SessionManager`, initialize the `SessionManager` on your `Application` class.
 
 ```
 public class SessionManagerApplication extends Application {
@@ -38,7 +38,7 @@ public class SessionManagerApplication extends Application {
 }
 ```
 
-Step 2 (create enum class) :
+Step 2 - Create an enum.
 
 ```
 public enum SessionKeys {
@@ -58,7 +58,7 @@ public enum SessionKeys {
 }
 ```
 
-Step 3:
+Step 3.
 
 ```
 @Override
