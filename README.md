@@ -7,7 +7,7 @@ You can download the source code for this project from Github's [releases page](
 
 You can also get the source code with [Gradle](https://gradle.org/):
 
-Step 1. Add the JitPack repository to your build file. Add it in your root build.gradle at the end of repositories:
+# Step 1. Add the JitPack repository to your build file. Add it in your root build.gradle at the end of repositories:
 
 	allprojects {
 		repositories {
@@ -16,7 +16,7 @@ Step 1. Add the JitPack repository to your build file. Add it in your root build
 		}
 	}
 	
-Step 2. Add the dependency
+# Step 2. Add the dependency
 
 	dependencies {
 	        compile 'com.github.Chingiz:SessionManager-Android:1.1'
@@ -38,7 +38,7 @@ public class SessionManagerApplication extends Application {
 }
 ```
 
-Step 2 - Create an enum.
+# Step 2 - Create an enum.
 
 ```
 public enum SessionKeys {
@@ -58,7 +58,7 @@ public enum SessionKeys {
 }
 ```
 
-Step 3.
+# Step 3.
 
 ```
 @Override
